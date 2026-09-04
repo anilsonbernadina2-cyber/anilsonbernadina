@@ -1,0 +1,349 @@
+/* =========================================
+   PORTFÓLIO PESSOAL — ANILSON
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background: #0a0a0f;
+    --background-light: #11111a;
+    --card: #15151f;
+    --text: #ffffff;
+    --text-secondary: #a7a7b3;
+    --primary: #00e5ff;
+    --primary-dark: #00a8bd;
+    --border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ===== BARRA DE NAVEGAÇÃO ===== */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary);
+}
+
+/* ===== INÍCIO ===== */
+
+#inicio {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 60px;
+
+    background:
+        radial-gradient(circle at top right, rgba(0, 229, 255, 0.15), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(0, 229, 255, 0.08), transparent 35%);
+}
+
+.hero {
+    max-width: 850px;
+}
+
+.hero p:first-child {
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero .description {
+    color: var(--text-secondary);
+    font-size: 19px;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+/* ===== BOTÕES ===== */
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    margin: 5px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #001014;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.35);
+}
+
+.btn-secondary {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-secondary:hover {
+    background: var(--primary);
+    color: #001014;
+}
+
+/* ===== SEÇÕES ===== */
+
+section {
+    padding: 100px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    color: var(--primary);
+}
+
+.section-title p {
+    color: var(--text-secondary);
+}
+
+/* ===== SOBRE ===== */
+
+.about {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about p {
+    color: var(--text-secondary);
+    font-size: 18px;
+}
+
+/* ===== HABILIDADES ===== */
+
+.skills-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.skill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-7px);
+    border-color: var(--primary);
+}
+
+.skill h3 {
+    margin-bottom: 8px;
+}
+
+.skill p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* ===== PROJETOS ===== */
+
+.projects {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary);
+}
+
+.project h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.project p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.project a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+/* ===== CONTACTO ===== */
+
+.contact {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.contact p {
+    color: var(--text-secondary);
+    margin-bottom: 25px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.contact-links a {
+    color: var(--text);
+    text-decoration: none;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* ===== RODAPÉ ===== */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* ===== ANIMAÇÃO ===== */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero {
+    animation: aparecer 1s ease;
+}
+
+/* ===== TELEMÓVEL ===== */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero .description {
+        font-size: 16px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+}
